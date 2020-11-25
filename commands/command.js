@@ -23,6 +23,22 @@ module.exports = (client, aliases, perms, callback) => {
             }else{
                 return;
             }
+        }else if(perms === 'mods'){
+            if(message.member.hasPermission('MANAGE_MESSAGES')){
+                const {content} = message;
+
+                aliases.forEach(alias => {
+                    const command = `${prefix}${alias}`;
+
+                    if(content.startsWith(`${command}`) || content === command){
+                        console.log(`running the command ${command}`);
+                        callback(message);
+                    }
+
+                })
+            }else{
+                return;
+            }
         }else{
             const {content} = message;
 

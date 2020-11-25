@@ -33,8 +33,8 @@ client.on('ready', () => {
 				.addField('$clear [number]', 'clears all a certain amount of messages in a channel (should be less than 100)', false)
 				.addField('$status [coding]', 'This sets the bots status to the specified text', false)
 				.addField('$embed [{"name":"name", "value": "value"}]', 'This creates a embed, you can seperate fields with a comma(,)', false)
-				.addField(prefix + 'ban [@member]', 'This bans the member mentioned in the command', false)
-				.addField( prefix + 'kick [@member]', 'This kicks the member mentioned in the command', false)
+				.addField('$ban [@member]', 'This bans the member mentioned in the command', false)
+				.addField('$kick [@member]', 'This kicks the member mentioned in the command', false)
 				.addField('\u200B', '\u200B')
 				.setTimestamp()
 				.setFooter('TheNewBoston', logo);
